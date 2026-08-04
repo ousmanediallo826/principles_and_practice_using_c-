@@ -66,47 +66,110 @@ int main() {
     // Drill
     
 
-    std::string first_name;
+    // std::string first_name;
 
-    std::cout << "Enter the name of the person you want to write to \n";
-    std::cin >> first_name;
+    // std::cout << "Enter the name of the person you want to write to \n";
+    // std::cin >> first_name;
 
-    std::cout << "Dear " << first_name << ",\n\n";
+    // std::cout << "Dear " << first_name << ",\n\n";
 
-    std::cout << "How are you? I am fine. I miss you. I hope to see you soon.\n";
-    std::cout << "I have a question for you. Do you like C++? I think it is a great programming language.\n";
+    // std::cout << "How are you? I am fine. I miss you. I hope to see you soon.\n";
+    // std::cout << "I have a question for you. Do you like C++? I think it is a great programming language.\n";
 
-    std::cout << "Add a friend name: \n";
-    std::string friend_name;
-    std::cin >> friend_name;
+    // std::cout << "Add a friend name: \n";
+    // std::string friend_name;
+    // std::cin >> friend_name;
 
-    std::cout << "Have you seen " << friend_name << " lately?\n";
+    // std::cout << "Have you seen " << friend_name << " lately?\n";
 
-    std::cout << "Enter the age of the recipient: \n";
-    int age;
-    std::cin >> age;
+    // std::cout << "Enter the age of the recipient: \n";
+    // int age;
+    // std::cin >> age;
 
-    std::cout << "I hear you just had a birthday and you are " << age << " years old.\n";
+    // std::cout << "I hear you just had a birthday and you are " << age << " years old.\n";
 
-    if (age <= 0 || age >= 110) {
-        simple_error("you're kidding!");
+    // if (age <= 0 || age >= 110) {
+    //     simple_error("you're kidding!");
+    // }
+    // else if (age < 12) {
+    //     std::cout << "Next year you will be " << age + 1 << ".\n";
+    // }
+    // else if (age == 17) {
+    //     std::cout << "Next year you will be able to vote.\n";
+    // }
+    // else if (age > 70) {
+    //     std::cout << "I hope you are enjoying retirement.\n";
+    // }
+
+    // std::cout << "Yours sincerely,\n\n\n";
+    // std::cout << "Ousmane\n";
+
+
+
+    // Exercises
+
+    // [2] Write a program in C++ that converts from miles to kilometers.
+    //  Your program should have a reasonable prompt for the user to enter a number of miles.\
+     Hint: A mile is1.609 kilometers.
+
+     int miles;
+     std::cout << "Enter a number of miles: \n";
+     std::cin >> miles;
+     double kilometers = miles * 1.609;
+     std::cout << miles << " miles is " << kilometers << " kilometers.\n";
+
+    //  [3] Write a program that doesn’t do anything,
+    //  but declares a number of variables with legal and illegal
+    //  names (such as int double = 0;), so that you can see how the compiler reacts.
+
+    // int double = 0;
+    // int 2nd_variable = 0;
+    // int my_variable = 0;
+    // double int = 0;
+    // std::string string = "Hello";
+
+
+    // [4] Write a program that prompts the user to enter two integer values. 
+    // Store these values in int variables named val1 and val2. 
+    // Write your program to determine the smaller, larger, sum, difference,
+    //  product, and ratio of these values and report them to the user.
+
+    int val1, val2;
+    std::cout << "Enter two integer values: \n";
+    std::cin >> val1 >> val2;
+    int smaller = (val1 < val2) ? val1 : val2;
+    int larger = (val1 > val2) ? val1 : val2;
+    int sum = val1 + val2;
+    int difference = val1 - val2;
+    int product = val1 * val2;
+    double ratio = (val2 != 0) ? static_cast<double>(val1) / val2 : 0.0;
+
+    std::cout << "Smaller: " << smaller << "\n";
+    std::cout << "Larger: " << larger << "\n";
+    std::cout << "Sum: " << sum << "\n";
+    std::cout << "Difference: " << difference << "\n";
+    std::cout << "Product: " << product << "\n";
+    if (val2 != 0) {
+        std::cout << "Ratio: " << ratio << "\n";
+    } else {
+        std::cout << "Ratio: undefined (division by zero)\n";   
     }
-    else if (age < 12) {
-        std::cout << "Next year you will be " << age + 1 << ".\n";
-    }
-    else if (age == 17) {
-        std::cout << "Next year you will be able to vote.\n";
-    }
-    else if (age > 70) {
-        std::cout << "I hope you are enjoying retirement.\n";
-    }
 
-    std::cout << "Yours sincerely,\n\n\n";
-    std::cout << "Ousmane\n";
+    // [6] Write a program that prompts the user to enter three integer values,
+    //  and then outputs the values in numerical sequence separated by commas. 
+    // So, if the user enters the values 10 4 6, the output should be 4, 6, 10. 
+    // If two values are the same, they should just be ordered together. So, the input 4 5 4 should give 4, 4, 5.
+
+    int a, b, c;
+    std::cout << "Enter three integer values: \n";
+    std::cin >> a >> b >> c;
+    // Sort the values in ascending order
+    if (a > b) std::swap(a, b);
+    if (a > c) std::swap(a, c);
+    if (b > c) std::swap(b, c);
+    std::cout << "Sorted values: " << a << ", " << b << ", " << c << "\n";
 
 
-
-    
 
 
 }
