@@ -3,6 +3,10 @@ int square(int x) {
     return x * x;
     } 
 
+int addition(int a, int b) {
+    return a + b;
+}
+
 int main() {
     // 3.4 Statements
 
@@ -99,7 +103,10 @@ int main() {
         std::cout << i << '\t' << square(i) << '\n';
     }
 
-
+    std::cout << "Please enter two integer values: \n";
+    int x, y;
+    std::cin >> x >> y;
+    std::cout << "The sum of " << x << " and " << y << " is " << addition(x, y) << "\n";
 
         
 }
