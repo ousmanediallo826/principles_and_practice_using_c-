@@ -90,23 +90,74 @@ int main() {
     // 3.4.2 Iteration
     // 3.4.2.1 while-statements
     
-    int i = 0;
+    // int i = 0;
 
-    while (i < 100) {
-        std::cout << i << '\t' << square(i) << '\n';
-        ++i;
-    }
+    // while (i < 100) {
+    //     std::cout << i << '\t' << square(i) << '\n';
+    //     ++i;
+    // }
 
     //3.4.2.3 for-statements
 
-    for (int i = 100; i > 0; --i) {
-        std::cout << i << '\t' << square(i) << '\n';
+    // for (int i = 100; i > 0; --i) {
+    //     std::cout << i << '\t' << square(i) << '\n';
+    // }
+
+    // std::cout << "Please enter two integer values: \n";
+    // int x, y;
+    // std::cin >> x >> y;
+    // std::cout << "The sum of " << x << " and " << y << " is " << addition(x, y) << "\n";
+
+
+    // 3.6 vector
+
+    // std::vector<int> v = {1, 2, 4, 8, 16, 32, 64, 128};
+    // for (int i = 0; i < v.size(); ++i) {
+    //     std::cout << v[i] << '\n';
+    // }
+    // std::vector<std::string> names = {"Ousmane", "Diallo", "is", "a", "good", "programmer"};
+    // for (int i = 0; i < names.size(); ++i) {
+    //     std::cout << names[i] << '\n';
+    // }
+
+    // std::vector<int> g = {1, 2, 4, 8, 16, 32, 64, 128};
+    // for (int x : g) {
+    //     std::cout << x << '\n';
+    // }
+
+    // 3.6.2 Growing a vector
+
+    // std::vector<double> temps;
+    // for (double temp; std::cin >> temp;) {
+    //     temps.push_back(temp);
+    //     std::cout << "Temperature recorded: " << temp << '\n';
+    //     std::cout << "Number of temperatures recorded: " << temps.size() <<" " << temps[temps.size() - 1] << '\n';
+    // }
+
+    // std::vector<std::string> words;
+    // for (std::string temp; std::cin >> temp;) {
+    //     words.push_back(temp);
+    // }
+    // std::cout << "Number of words: " << words.size() << '\n';
+
+    // std::sort(words.begin(), words.end());
+
+    // for (int i = 0; i < words.size(); ++i) {
+    //     if (i == 0 || words[i] != words[i-1]) {
+    //         std::cout << words[i] << '\n';
+    //     }
+    // }
+
+
+
+    //Execrises
+    // [2] Write a program that reads a string from input and then, for each character read, prints out the character and its integer value on a line.
+
+    std::string input;
+    std::cout << "Please enter a string: \n";
+    std::getline(std::cin, input);
+    for (char c : input) {
+        std::cout << c << " " << static_cast<int>(c) << '\n';
     }
-
-    std::cout << "Please enter two integer values: \n";
-    int x, y;
-    std::cin >> x >> y;
-    std::cout << "The sum of " << x << " and " << y << " is " << addition(x, y) << "\n";
-
         
 }
