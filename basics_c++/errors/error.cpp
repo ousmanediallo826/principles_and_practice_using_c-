@@ -1,7 +1,19 @@
 #include <iostream>
+
+char ask_user(std::string question) {
+    std::cout << question << "? (yes or no)\n";
+    std::string answer;
+    std::cin >> answer;
+
+    if (answer == "y" || "yes") return 'Y';
+    if (answer == "n" || "no" ) return 'N';
+    return 'bad';
+}
 int area(int width, int length){
-    int result = width * length;
-    return result;
+    
+    if (length<=0 || width <=0)
+                return −1;
+    return length * width;
 };
 int main () {
     
