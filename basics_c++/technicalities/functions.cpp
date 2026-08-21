@@ -28,8 +28,21 @@ void modifyValue(int& val) {
     val *= 2;
 }
 
+//  Exercise 1: Parameter Passing Semantics
+void AnalyzeAndZero(int val, int& ref, const std::string& str) {
+    val += 10;
+    ref = 0;
+    // str += "!";
+}
 
+// Exercise 2: Implicit Conversion & Temporary Lifetimes
 
+void inspectLength(const std::string& text ) {
+    text.length();
+} 
+void modifyLength(const std::string& text) {
+    std::cout << text.length() << " modified.";
+}
 int main() {
 
     int num = 5;
@@ -46,5 +59,18 @@ int main() {
 
     int x = 10;
     modifyValue(x);
+
+
+    int a = 50;
+    int b = 100;
+    std::string s = "Hello";
+    AnalyzeAndZero(a,b,s);
+    
+
+    std::string text = "Systems Programming";
+    inspectLength(text);
+    std::cout << '\n';
+    modifyLength(text);
+
 
 }
